@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -124,8 +123,8 @@ helloR</code></pre>
 <div id="data-types-structures" class="section level2">
 <h2><strong>Data Types &amp; Structures</strong></h2>
 <div id="there-are-quite-a-number-of-data-types-in-r-for-this-training-we-will-only-be-covering-numeric-integer-logical-character-vector-list-matrix-data-frames" class="section level4">
-<h4>There are quite a number of data types in R, For this training we will only be covering numeric, integer, logical, character, vector, list, matrix, data frames</h4>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># First we will look into how we can identify the type of the data your we are handling, there is a handy inbuilt function called &quot;class()&quot; to help us with it</span>
+<h4>There are quite a number of data types in R, for this training we will only be covering numeric, integer, logical, character, vector, list, matrix, data frames</h4>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># First we will look into how we can identify the type of the data that we are handling, there is a handy inbuilt function called &quot;class()&quot; to help us with it</span>
 <span class="co"># Storing a value to an object and use class() function to find out its data type  </span>
 <span class="co"># Example 1</span>
 x &lt;-<span class="st"> </span><span class="fl">1.5</span>
@@ -293,7 +292,7 @@ x</code></pre>
 <h4><strong>Data Frames</strong></h4>
 </div>
 <div id="a-data-frame-is-used-for-storing-tables-it-is-a-list-of-vectors-of-equal-length-placed-together" class="section level4">
-<h4>A data frame is used for storing tables, It is a list of vectors of equal length placed together</h4>
+<h4>A data frame is used for storing tables, it is a list of vectors of equal length placed together</h4>
 <pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">5</span>) 
 b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Apple&quot;</span>, <span class="st">&quot;Banana&quot;</span>, <span class="st">&quot;Orange&quot;</span>, <span class="st">&quot;Mangoes&quot;</span>, <span class="st">&quot;Pineapples&quot;</span>, <span class="st">&quot;Papaya&quot;</span>, <span class="st">&quot;Watermelon&quot;</span>) 
 c &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;1.00&quot;</span>, <span class="st">&quot;0.70&quot;</span>, <span class="st">&quot;1.50&quot;</span>, <span class="st">&quot;6.00&quot;</span>, <span class="st">&quot;3.00&quot;</span>, <span class="st">&quot;2.90&quot;</span>, <span class="st">&quot;4.35&quot;</span>) 
@@ -377,7 +376,7 @@ dF$Fruit</code></pre>
 </div>
 <div id="we-can-slice-the-columns-and-rows-in-a-data-frames-by-either-referencing-to-their-index-or-their-rowcolumn-name" class="section level4">
 <h4><strong>We can slice the columns and rows in a data frames by either referencing to their index or their row/column name</strong></h4>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line will get first column using the number index as the refernce </span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line will get first column using the number index as the reference </span>
 dF[<span class="dv">1</span>]</code></pre>
 <pre><code>##        Quantity
 ## Item 1        2
@@ -404,16 +403,16 @@ dF[<span class="st">&quot;Quantity&quot;</span>, <span class="st">&quot;Price&qu
 dF[<span class="dv">1</span>,]</code></pre>
 <pre><code>##        Quantity Fruit Price in ($)
 ## Item 1        2 Apple         1.00</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line will get first row using the name index as the refernce </span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line will get first row using the name index as the reference </span>
 dF[<span class="st">&quot;Item 1&quot;</span>,]</code></pre>
 <pre><code>##        Quantity Fruit Price in ($)
 ## Item 1        2 Apple         1.00</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line will get the third and the sixth row using the number index as the refernce </span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line will get the third and the sixth row using the number index as the reference </span>
 dF[<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">6</span>),]</code></pre>
 <pre><code>##        Quantity  Fruit Price in ($)
 ## Item 3        3 Orange         1.50
 ## Item 6        1 Papaya         2.90</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line will get the third and the sixth row using the name index as the refernce </span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line will get the third and the sixth row using the name index as the reference </span>
 dF[<span class="kw">c</span>(<span class="st">&quot;Item 3&quot;</span>,<span class="st">&quot;Item 6&quot;</span>),]</code></pre>
 <pre><code>##        Quantity  Fruit Price in ($)
 ## Item 3        3 Orange         1.50
@@ -481,8 +480,8 @@ e</code></pre>
 </div>
 <div id="loading-data" class="section level2">
 <h2><strong>Loading data</strong></h2>
-<div id="here-we-will-look-into-how-we-can-load-data-from-the-the-local-directory-into-rs-environment.-by-default-many-commonly-used-data-formats-can-be-loaded-into-rs-environment-with-out-any-external-dependencies-but-for-those-other-uncommonly-used-formats-there-are-external-libraries-that-bridge-this-gap-and-helps-us-load-hte-data-into-r.-here-we-will-focus-on-loading-csv-and-tab-delimited-files" class="section level4">
-<h4>Here we will look into how we can load data from the the local directory into R’s environment. By default many commonly used data formats can be loaded into R’s environment with out any external dependencies, But for those other uncommonly used formats there are external libraries that bridge this gap and helps us load hte data into R. Here we will focus on loading CSV and Tab delimited files</h4>
+<div id="here-we-will-look-into-how-we-can-load-data-from-the-local-directory-into-rs-environment.-by-default-many-commonly-used-data-formats-can-be-loaded-into-rs-environment-without-any-external-dependencies-but-for-those-other-uncommonly-used-formats-there-are-external-libraries-that-bridge-this-gap-and-help-us-load-the-data-into-r.-here-we-will-focus-on-loading-csv-and-tab-delimited-files" class="section level4">
+<h4>Here we will look into how we can load data from the local directory into R’s environment. By default many commonly used data formats can be loaded into R’s environment without any external dependencies, but for those other uncommonly used formats there are external libraries that bridge this gap and help us load the data into R. Here we will focus on loading CSV and Tab delimited files</h4>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line will read and load a CSV data format file to an specified object/container. Here we will be passing arguments to the function &quot;read.csv&quot;. The first argument is the sep(seperator), this will tell R how each element/variable is seperated in your dataset. In this case we are using CSV and the values are seperated by &quot;,&quot; and so we will add 'sep = &quot;,&quot;'. The second argument is &quot;header&quot;, this will tell R on whether the dataset has column names or not. In this case our dataset has column names so we will add 'header = TRUE'</span>
 dataCSV &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data_CSV.csv&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)
 dataCSV</code></pre>
@@ -565,8 +564,10 @@ dataTAB</code></pre>
 <div id="note-package-names-are-case-sensitive" class="section level4">
 <h4><strong>Note: Package names are case sensitive</strong></h4>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line will help us install new package. For installing new packages there are two key things that a user has to give as an input. First is the package name and the second input is for the user to select the country he is installing the library from(The purpose for the selection of the country is for R to reachout to the nearest server to grab the package files )</span>
-<span class="co"># Remove the &quot;#&quot; before running the following code</span>
-<span class="co">#install.packages(&quot;ggplot2&quot;)</span></code></pre>
+<!-- <span class="co"># Remove the &quot;#&quot; before running the following code</span> -->
+<span class="kw">install.packages(&quot;ggplot2&quot;)</span>
+<!-- <span class="co">#install.packages(&quot;ggplot2&quot;)</span> -->
+</code></pre>
 </div>
 <div id="note-external-libraries-need-to-be-loaded-every-time-a-new-session-is-initiated-in-r" class="section level4">
 <h4><strong>Note: External libraries need to be loaded every time a new session is initiated in R</strong></h4>
@@ -674,8 +675,8 @@ mt &lt;-<span class="st"> </span>mtcars
 <div id="here-we-will-look-into-frequency-distribution-mean-median-standard-deviation-etc" class="section level4">
 <h4>Here we will look into frequency distribution, mean, median, standard deviation, etc…</h4>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># We will use the dataset &quot;painters&quot; from the package &quot;MASS&quot; and faithful dataset to do some statistics</span>
-<span class="co"># Remove the &quot;#&quot; from the line below before running it</span>
-<span class="co"># install.packages(&quot;MASS&quot;)</span>
+<!-- <span class="co"># Remove the &quot;#&quot; from the line below before running it</span> -->
+<span class="kw">install.packages(&quot;MASS&quot;)</span>
 <span class="kw">library</span>(MASS)
 pt &lt;-<span class="st"> </span>painters
 ft &lt;-<span class="st"> </span>faithful
@@ -769,8 +770,8 @@ bins &lt;-<span class="st"> </span><span class="kw">cut</span>(eruptions, sequen
 <span class="kw">quantile</span>(ft$eruptions)</code></pre>
 <pre><code>##      0%     25%     50%     75%    100% 
 ## 1.60000 2.16275 4.00000 4.45425 5.10000</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Correlation analysis can be done in differnt ways in R, we will cover some of ways of doing correlation using the inbuilt correlation function. The inbuilt fucntion will issue out an error message if there is a non-numeric data type input given </span>
-<span class="co"># First we will do a simple correlation by doing 1 column/variable vs 1 column/variable. We will check whether is there a correlation between the Expression and the number of color used</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Correlation analysis can be done in differnt ways using R, we will cover some of the ways to calculate correlation using the inbuilt correlation function. The inbuilt fucntion will issue out an error message if the input is of non-numeric data type </span>
+<span class="co"># First we will do a simple correlation by doing 1 column/variable vs 1 column/variable. We will check whether there is correlation between the Expression and the number of color in paintings </span>
 <span class="kw">cor</span>(pt[,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)])</code></pre>
 <pre><code>##             Composition   Drawing
 ## Composition   1.0000000 0.4154456
@@ -824,8 +825,8 @@ schoolsFrequency &lt;-<span class="st"> </span><span class="kw">table</span>(sch
 </div>
 <div id="stacked-bar-chart" class="section level4">
 <h4><strong>Stacked Bar Chart</strong></h4>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># We will plot a stacked bar chart,differnt colours of the stack represent the transmission type in a car.X-Axis represent the number of gears the cars have and Y-Axis represent the number of cars</span>
-<span class="co"># We will first prepare the data for plotting the stacked bar chart, we will us the &quot;mtcars&quot; data </span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># We will plot a stacked bar chart, different colours of the stack represent the transmission type in a car.X-Axis represent the number of gears the cars have and Y-Axis represent the number of cars</span>
+<span class="co"># We will first prepare the data for plotting the stacked bar chart using &quot;mtcars&quot; dataset </span>
 <span class="co"># This line will push the count of transmission type and number of gears to the object &quot;stackedBar&quot;</span>
 <span class="co"># Note: While preparing the data for the stacked bar chart the the first input will represent Y-Axis and the second will represent X-Axis. Eg. table(Y-Axis,X-Axis)</span>
 stackedBar &lt;-<span class="st"> </span><span class="kw">table</span>(mtcars$vs, mtcars$gear)
@@ -869,8 +870,9 @@ waiting &lt;-<span class="st"> </span>faithful$waiting
 </div>
 <div id="saving-charts" class="section level4">
 <h4><strong>Saving Charts</strong></h4>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Plotted charts can be saved in different formarts like PDF, JPEG, PNG, etc...</span>
-<span class="co"># This line will is where we mention what will be the output file type, here we are saving the chart to a PNG file </span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Plotted charts can be saved in different formats like PDF, JPEG, PNG, etc...</span>
+<span class="co"># This line is where we will specify the output file type.</span>
+<span class="co"># Here we will save the chart to a PNG file </span>
 <span class="kw">png</span>(<span class="st">&quot;Histogram.png&quot;</span>)
 <span class="co"># Then we will run the codes for plotting</span>
 <span class="kw">barplot</span>(stackedBar, <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">'lightblue'</span>, <span class="st">'cornsilk'</span>), <span class="dt">legend =</span> <span class="ot">TRUE</span>, <span class="dt">xlab=</span><span class="st">&quot;Number of Gears&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Number of Cars&quot;</span>, <span class="dt">main=</span><span class="st">&quot;No. Of Gears Vs Transmission Type&quot;</span>)
@@ -885,7 +887,7 @@ waiting &lt;-<span class="st"> </span>faithful$waiting
 <div id="preparing-the-data" class="section level2">
 <h2><strong>Preparing the Data!!</strong></h2>
 <div id="the-process-of-preparing-data-is-mentioned-using-different-terms-like-data-wrangling-data-munging-slicing-dicing-data-etc-here-we-will-look-at-some-of-the-common-data-manipulation-tasks-like-merging-aggregation-removing-na-and-blank-cellsvalues-subsetting-sorting-and-joins" class="section level4">
-<h4>The process of preparing data is mentioned using different terms like data wrangling, data munging, slicing &amp; dicing data, etc… Here we will look at some of the common data manipulation tasks like merging, aggregation, Removing “NA” and blank cells/values, subsetting, sorting and joins</h4>
+<h4>The process of preparing data is mentioned using different terms like data wrangling, data munging, slicing &amp; dicing data, etc… Here we will look at some of the common data manipulation tasks like merging, aggregation, removing “NA” and blank cells/values, subsetting, sorting and joins</h4>
 </div>
 <div id="mergingbinding-joins" class="section level4">
 <h4><strong>Merging/Binding &amp; Joins</strong></h4>
@@ -1570,48 +1572,95 @@ sortDescMore &lt;-<span class="st"> </span>mt[<span class="kw">order</span>(-mt$
 <div id="so-what-are-the-things-that-r-can-do-for-us" class="section level4">
 <h4><strong>So what are the things that R can do for us??</strong></h4>
 </div>
-<div id="we-will-see-how-to-build-a-predictive-model-using-logistic-regression" class="section level4">
-<h4>We will see how to build a predictive model using logistic regression</h4>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;MASS&quot;</span>)
-<span class="kw">data</span>(menarche)
-<span class="kw">summary</span>(menarche)</code></pre>
-<pre><code>##       Age            Total           Menarche      
-##  Min.   : 9.21   Min.   :  88.0   Min.   :   0.00  
-##  1st Qu.:11.58   1st Qu.:  98.0   1st Qu.:  10.00  
-##  Median :13.08   Median : 105.0   Median :  51.00  
-##  Mean   :13.10   Mean   : 156.7   Mean   :  92.32  
-##  3rd Qu.:14.58   3rd Qu.: 117.0   3rd Qu.:  92.00  
-##  Max.   :17.58   Max.   :1049.0   Max.   :1049.00</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(Menarche/Total ~<span class="st"> </span>Age, <span class="dt">data=</span>menarche)
-glm.out =<span class="st"> </span><span class="kw">glm</span>(<span class="kw">cbind</span>(Menarche, Total-Menarche) ~<span class="st"> </span>Age, <span class="dt">family=</span><span class="kw">binomial</span>(logit), <span class="dt">data=</span>menarche)
-<span class="kw">plot</span>(Menarche/Total ~<span class="st"> </span>Age, <span class="dt">data=</span>menarche)
-<span class="kw">lines</span>(menarche$Age, glm.out$fitted, <span class="dt">type=</span><span class="st">&quot;l&quot;</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)
-<span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;Menarche Data with Fitted Logistic Regression Line&quot;</span>)</code></pre>
-<p><img src="data:image/png;base64,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" title alt width="672" /></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(glm.out)</code></pre>
+<div id="we-will-see-how-with-the-help-of-r-we-can-build-a-predictive-model-based-on-logistic-regression-for-binary-prediction." class="section level4">
+<h4>We will see how with the help of R we can build a predictive model based on logistic regression for binary prediction.</h4>
+</div>
+<div id="the-scenario-here-is-that-we-are-going-to-train-the-model-to-predict-if-a-cars-transmission-is-auto-or-manual" class="section level4">
+<h4>The scenario here is that we are going to train the model to predict if a car’s transmission is Auto or Manual</h4>
+<pre class="sourceCode r"><code class="sourceCode r">mt &lt;-<span class="st"> </span>mtcars
+<span class="kw">summary</span>(mt)</code></pre>
+<pre><code>##       mpg             cyl             disp             hp       
+##  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
+##  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
+##  Median :19.20   Median :6.000   Median :196.3   Median :123.0  
+##  Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
+##  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
+##  Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
+##       drat             wt             qsec             vs        
+##  Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
+##  1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
+##  Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
+##  Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
+##  3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
+##  Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
+##        am              gear            carb      
+##  Min.   :0.0000   Min.   :3.000   Min.   :1.000  
+##  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
+##  Median :0.0000   Median :4.000   Median :2.000  
+##  Mean   :0.4062   Mean   :3.688   Mean   :2.812  
+##  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+##  Max.   :1.0000   Max.   :5.000   Max.   :8.000</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(mt)</code></pre>
+<pre><code>## [1] 32</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Here we are training the model to predict transmission type of an car using its horse power and weight as the input</span>
+logisticModel &lt;-<span class="st"> </span><span class="kw">glm</span>( <span class="dt">formula =</span> am ~<span class="st"> </span>hp +<span class="st"> </span>wt, <span class="dt">data =</span> mt, <span class="dt">family =</span> binomial)
+<span class="co"># Predicting the transmission of cars using our model</span>
+testData &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">hp=</span><span class="kw">c</span>(<span class="dv">120</span>, <span class="dv">91</span>, <span class="dv">104</span>), <span class="dt">wt=</span><span class="kw">c</span>(<span class="fl">2.8</span>, <span class="fl">1.5</span>, <span class="fl">3.1</span>))
+predictedValue &lt;-<span class="st"> </span><span class="kw">predict</span>(logisticModel, testData, <span class="dt">type =</span> <span class="st">&quot;response&quot;</span>)
+<span class="co"># The putput show us the probability of the 3 cars having manual transmission 1st - x%, 2nd - x% and 3rd x%</span>
+predictedValue</code></pre>
+<pre><code>##          1          2          3 
+## 0.64181253 0.99995640 0.08151846</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Summary of the trained model will show us the different statistical measures , here we can find the significance of each independent input varaiables </span>
+<span class="kw">summary</span>(logisticModel)</code></pre>
 <pre><code>## 
 ## Call:
-## glm(formula = cbind(Menarche, Total - Menarche) ~ Age, family = binomial(logit), 
-##     data = menarche)
+## glm(formula = am ~ hp + wt, family = binomial, data = mt)
 ## 
 ## Deviance Residuals: 
 ##     Min       1Q   Median       3Q      Max  
-## -2.0363  -0.9953  -0.4900   0.7780   1.3675  
+## -2.2537  -0.1568  -0.0168   0.1543   1.3449  
 ## 
 ## Coefficients:
-##              Estimate Std. Error z value Pr(&gt;|z|)    
-## (Intercept) -21.22639    0.77068  -27.54   &lt;2e-16 ***
-## Age           1.63197    0.05895   27.68   &lt;2e-16 ***
+##             Estimate Std. Error z value Pr(&gt;|z|)   
+## (Intercept) 18.86630    7.44356   2.535  0.01126 * 
+## hp           0.03626    0.01773   2.044  0.04091 * 
+## wt          -8.08348    3.06868  -2.634  0.00843 **
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## (Dispersion parameter for binomial family taken to be 1)
 ## 
-##     Null deviance: 3693.884  on 24  degrees of freedom
-## Residual deviance:   26.703  on 23  degrees of freedom
-## AIC: 114.76
+##     Null deviance: 43.230  on 31  degrees of freedom
+## Residual deviance: 10.059  on 29  degrees of freedom
+## AIC: 16.059
 ## 
-## Number of Fisher Scoring iterations: 4</code></pre>
+## Number of Fisher Scoring iterations: 8</code></pre>
+</div>
+<div id="with-r-we-can-also-work-with-unstructured-data.-here-we-will-look-at-performng-sentiment-analysis-on-free-text." class="section level4">
+<h4>With R we can also work with unstructured data. Here we will look at performng sentiment analysis on free text.</h4>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Installing dependencies</span>
+<!-- <span class="co">#install.packages(&quot;devtools&quot;)</span> -->
+<span class="kw">install.packages(&quot;devtools&quot;)</span>
+<span class="kw">library</span>(<span class="st">&quot;devtools&quot;</span>)</code></pre>
+<pre><code>## WARNING: Rtools is required to build R packages, but is not currently installed.
+## 
+## Please download and install Rtools 3.2 from http://cran.r-project.org/bin/windows/Rtools/ and then run find_rtools().</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This package uses keyword weightage based approach to assign sentiment scores</span>
+<span class="kw">install_github</span>(<span class="st">&quot;andrie/sentiment&quot;</span>)</code></pre>
+<pre><code>## Downloading github repo andrie/sentiment@master
+## Installing sentiment
+## &quot;C:/PROGRA~1/R/R-31~1.3/bin/x64/R&quot; --no-site-file --no-environ --no-save  \
+##   --no-restore CMD INSTALL  \
+##   &quot;C:/Users/prithivirajanma/AppData/Local/Temp/RtmpYzxHSi/devtools2294417e778e/andrie-sentiment-666074b&quot;  \
+##   --library=&quot;D:/Data/prithivirajanma/My Documents/R/win-library/3.1&quot;  \
+##   --install-tests</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(sentiment)
+<span class="co"># Scoring sample free text </span>
+sentimentExample &lt;-<span class="st"> </span><span class="kw">sentiment</span>(<span class="kw">c</span>(<span class="st">&quot;Have a great day!!&quot;</span>, <span class="st">&quot;This is a terrible day&quot;</span>, <span class="st">&quot;I do not hate you, but I do not love you&quot;</span>))
+<span class="co"># Negative value represent neagtive sentiment, postive value represent positive sentiment and &quot;0&quot; represents neutral sentiment</span>
+sentimentExample</code></pre>
+<pre><code>## [1]  3 -3  0</code></pre>
 </div>
 </div>
 
